@@ -78,6 +78,6 @@ select = np.random.randint(missclass_images.shape[0], size=12)
 for index, value in enumerate(select):
     plt.subplot(3,4,index+1)
     plt.axis('off')
-    plt.imshow(missclass_images[value], cmap=plt.cm.gray_r, interpolation="nearest")
+    plt.imshow(missclass_images[value], cmap='Greys', interpolation="nearest")
     plt.title('Predicted: %i' %missclass_predicted[value])
 plt.show()
