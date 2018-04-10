@@ -17,6 +17,8 @@ n = houseData.shape[0]
 X = np.matrix([np.ones(n), houseData['surface'].as_matrix(), houseData['arrondissement'].as_matrix()]).T
 y = np.matrix(houseData['price']).T
 print(n,X.shape,y.shape)
+plt.scatter([X[:,0].T], [y.T], c=[X[:,1].T])
+plt.show()
 
 # Separation des training/testing set
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.9)
